@@ -1,8 +1,51 @@
 #+title: Emacs Overview
-* Emacs overview
-Sample file for emacs set up and configuration.
-sdasdfasdfasdfasdf
+#+author: Allan Neil
+#+creator: Allan Neil
+#+date: <2025-04-06 Sun>
+#+language: English
 
-more changes'
-sdfadsfasdfs
-asdfasdfasdf
+
+* Emacs overview
+** Purpose
+I love Emacs!  However problems arise when I have been away from it for too long and I forget how to use it or when I upgrade my computer and am forced to relearn how to install and set it up again.
+
+The purpose of this repository and set of documents is to provide a documented reminder of:
++ Which Emacs packages I use
++ How to install Emacs
++ How to install additional Emacs packages used
++ High level how-to instructions for using Emacs and packages
+
+** Why bother?
+Configuring Emacs is not for the feint of heart.  It fits into a class of problems which could be called non-trivial.
+So why bother?
+Why not just use VS Code or any number of easier to install and use alternatives?
+
+Fair questions.  The answer is simply that Emacs is addictive once you get used to it, which admittedly can take a long time.
+
+One measure of a good tool of any kind is to what extent does the distinction between user and tool disappear while they are using it.  My experience has been that over time Emacs usage gets so intuitively embedded into the muscle memory of my fingers as to seem part of me.
+
+* Reference Emacs Environment Snapshot
+Below is a snapshot of my environment..
++ Macbook Pro laptop 16 inch 2023, M2 Max chipset
++ Mac OS Sequoia 15.3.2
++ iTerm2 terminal
+  + ZSH Oh My Zsh with powerlevel10k theme
++ Emacs version 29.1
++ Doom Emacs version 3.0
+
+* Installing Doom Emacs and Dependencies:
+Doom Emacs has an excellent Getting Started Guide which can be used for this:
+https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org
+
+** Installing Doom Dependencies
++ ripgrep
++ coreutills fd (optional find )
++ Xcode (recommended if using Emacs for dev)
+See https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#with-homebrew for installation instructions using Homebrew.
+
+** Install Emacs
+The Doom Getting Started Guide recommends emacs-mac first, emacs-plus second, and thirdly just emacs.
+See https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#with-homebrew instructions,
+
+
+For Mac either Homebrew or MacPorts can be used.  I prefer Homebrew.
