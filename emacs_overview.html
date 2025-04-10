@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="English" xml:lang="English">
 <head>
-<!-- 2025-04-06 Sun 16:10 -->
+<!-- 2025-04-10 Thu 11:57 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Emacs Overview</title>
@@ -201,20 +201,41 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org696f63d">1. Emacs overview</a>
+<li><a href="#org15d6634">1. Emacs overview</a>
 <ul>
-<li><a href="#orga04b790">1.1. Purpose</a></li>
+<li><a href="#orgc21e208">1.1. Purpose</a></li>
+<li><a href="#org8368895">1.2. Why bother?</a></li>
+</ul>
+</li>
+<li><a href="#org94104b0">2. Reference Emacs Environment Snapshot</a></li>
+<li><a href="#org4d49672">3. Installing Doom Emacs and Dependencies:</a>
+<ul>
+<li><a href="#orgd8ef309">3.1. Installing Doom Dependencies</a></li>
+<li><a href="#org0b18b2e">3.2. Installing Emacs</a></li>
+<li><a href="#org0bb706d">3.3. Installing Doom</a></li>
+</ul>
+</li>
+<li><a href="#orge809070">4. Configuration of Doom Emacs</a>
+<ul>
+<li><a href="#orgd50d0e5">4.1. Setting $PATH</a></li>
+<li><a href="#org39af71b">4.2. Doom command - very important</a></li>
+<li><a href="#org2e8aa59">4.3. Configuring Github Magit</a>
+<ul>
+<li><a href="#orgfa73b12">4.3.1. Configuring Github</a></li>
+<li><a href="#org8be7cbc">4.3.2. Configuring Magit</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org696f63d" class="outline-2">
-<h2 id="org696f63d"><span class="section-number-2">1.</span> Emacs overview</h2>
+<div id="outline-container-org15d6634" class="outline-2">
+<h2 id="org15d6634"><span class="section-number-2">1.</span> Emacs overview</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orga04b790" class="outline-3">
-<h3 id="orga04b790"><span class="section-number-3">1.1.</span> Purpose</h3>
+<div id="outline-container-orgc21e208" class="outline-3">
+<h3 id="orgc21e208"><span class="section-number-3">1.1.</span> Purpose</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 I love Emacs!  However problems arise when I have been away from it for too long and I forget how to use it or when I upgrade my computer and am forced to relearn how to install and set it up again.
@@ -224,16 +245,165 @@ I love Emacs!  However problems arise when I have been away from it for too long
 The purpose of this repository and set of documents is to provide a documented reminder of:
 </p>
 <ul class="org-ul">
-<li>Which Emacs packages I use
-How to install Emacs
-How to install additional Emacs packages used
-High level how-to instructions for using Emacs and packages</li>
+<li>Which Emacs packages I use</li>
+<li>How to install Emacs</li>
+<li>How to install additional Emacs packages used</li>
+<li>High level how-to instructions for using Emacs and packages</li>
 </ul>
+</div>
+</div>
+<div id="outline-container-org8368895" class="outline-3">
+<h3 id="org8368895"><span class="section-number-3">1.2.</span> Why bother?</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Configuring Emacs is not for the feint of heart.  It fits into a class of problems which could be called non-trivial.
+So why bother?
+Why not just use VS Code or any number of easier to install and use alternatives?
+</p>
 
 <p>
-sdfadsfasdfs
-asdfasdfasdf
+Fair questions.  The answer is simply that Emacs is addictive once you get used to it, which admittedly can take a long time.
 </p>
+
+<p>
+One measure of a good tool of any kind is to what extent does the distinction between user and tool disappear while they are using it.  My experience has been that over time Emacs usage gets so intuitively embedded into the muscle memory of my fingers as to seem part of me.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org94104b0" class="outline-2">
+<h2 id="org94104b0"><span class="section-number-2">2.</span> Reference Emacs Environment Snapshot</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Below is a snapshot of my environment..
+</p>
+<ul class="org-ul">
+<li>Macbook Pro laptop 16 inch 2023, M2 Max chipset</li>
+<li>Mac OS Sequoia 15.3.2</li>
+<li>iTerm2 terminal
+<ul class="org-ul">
+<li>ZSH Oh My Zsh with powerlevel10k theme</li>
+</ul></li>
+<li>Emacs version 29.1</li>
+<li>Doom Emacs version 3.0</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4d49672" class="outline-2">
+<h2 id="org4d49672"><span class="section-number-2">3.</span> Installing Doom Emacs and Dependencies:</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Doom Emacs has an excellent Getting Started Guide which can be used for this:
+<a href="https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org">https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org</a>
+</p>
+</div>
+<div id="outline-container-orgd8ef309" class="outline-3">
+<h3 id="orgd8ef309"><span class="section-number-3">3.1.</span> Installing Doom Dependencies</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>ripgrep</li>
+<li>coreutills fd (optional find )</li>
+<li>Xcode (recommended if using Emacs for dev)</li>
+</ul>
+<p>
+See <a href="https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#with-homebrew">https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#with-homebrew</a> for installation instructions using Homebrew.
+</p>
+</div>
+</div>
+<div id="outline-container-org0b18b2e" class="outline-3">
+<h3 id="org0b18b2e"><span class="section-number-3">3.2.</span> Installing Emacs</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+The Doom Getting Started Guide recommends emacs-mac first, emacs-plus second, and thirdly just emacs.
+See <a href="https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#with-homebrew">https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#with-homebrew</a> instructions,
+For Mac either Homebrew or MacPorts can be used.  I prefer Homebrew.
+I follow the instructions for the first recommendation, emacs-mac.
+</p>
+</div>
+</div>
+<div id="outline-container-org0bb706d" class="outline-3">
+<h3 id="org0bb706d"><span class="section-number-3">3.3.</span> Installing Doom</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+After installing the dependencies and Emacs itself, finally Doom can be installed, again following the Getting Started Guide as linked above.
+        git clone <a href="https://github.com/hlissner/doom-emacs">https://github.com/hlissner/doom-emacs</a> ~/.emacs.d
+        ~/.emacs.d/bin/doom install
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge809070" class="outline-2">
+<h2 id="orge809070"><span class="section-number-2">4.</span> Configuration of Doom Emacs</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgd50d0e5" class="outline-3">
+<h3 id="orgd50d0e5"><span class="section-number-3">4.1.</span> Setting $PATH</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Since I am using ZSH shell, the hidden .ZSHRC file is edited to include both the Emacs bin and Doom paths as follows:
+</p>
+<ul class="org-ul">
+<li>Emacs - export PATH="/opt/homebrew/Cellar/emacs-mac/emacs-29.1-mac-10.0/Emacs.app/Contents/MacOS:$PATH"</li>
+<li>Doom - export PATH="$HOME/.emacs.d/bin:$PATH"</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org39af71b" class="outline-3">
+<h3 id="org39af71b"><span class="section-number-3">4.2.</span> Doom command - very important</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+There is a doom CLI tool which is used to install, update and maintain doom.
+Full explanation of this command and it's options can be found here: <a href="https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#the-bindoom-utility">https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#the-bindoom-utility</a>
+Excerpted here for reference (quote)
+</p>
+<ul class="org-ul">
+<li><b>doom sync</b>: This synchronizes your config with Doom Emacs. It ensures that needed packages are installed, orphaned packages are removed and necessary metadata correctly generated. Run this whenever you modify your doom! block or packages.el file. You’ll need doom sync -u if you override the recipe of package installed by another module.</li>
+<li><b>doom upgrade</b>: Updates Doom Emacs (if available) and all its packages.</li>
+<li><b>doom env</b>: (Re)generates an “envvar file”, which is a snapshot of your shell environment that Doom loads at startup. If your app launcher or OS launches Emacs in the wrong environment you will need this. <b><b>This is required for GUI Emacs users on MacOS.</b></b></li>
+<li><b>doom doctor</b>: If Doom misbehaves, the doc will diagnose common issues with your installation, system and environment.</li>
+<li><p>
+<b>doom purge</b>: Over time, the repositories for Doom’s plugins will accumulate. Run this command from time to time to delete old, orphaned packages, and with the -g switch to compact existing package repos.
+(unquote)
+</p>
+
+<p>
+It's a good idea to run both "Doom Sync" and "Doom Doctor" after installation to confirm everything is working correctly.
+</p></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2e8aa59" class="outline-3">
+<h3 id="org2e8aa59"><span class="section-number-3">4.3.</span> Configuring Github Magit</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+Magit is and included package with Doom and is an awesome interface to Git.
+</p>
+</div>
+<div id="outline-container-orgfa73b12" class="outline-4">
+<h4 id="orgfa73b12"><span class="section-number-4">4.3.1.</span> Configuring Github</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<p>
+Magit will require access to Github.  I use an SSH key for this.
+Instructions for this set up can be found here: <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org8be7cbc" class="outline-4">
+<h4 id="org8be7cbc"><span class="section-number-4">4.3.2.</span> Configuring Magit</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<p>
+After setting up SSH access to Github, setting up Magit should be straight forward.
+</p>
+
+<p>
+Pressing Cmd-X will bring up the M-x prompt where there are 3 magit commands as follows:
+</p>
+<ul class="org-ul">
+<li><b>magit-remote-add</b> to add a remote (github)</li>
+<li><b>magit-remote-configure</b> to configure an existing remote (github)</li>
+<li><b>magit-remote-remove</b> to remove an existing remote (github)</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -241,7 +411,7 @@ asdfasdfasdf
 <div id="postamble" class="status">
 <p class="date">Date: 2025-04-06 Sun 00:00</p>
 <p class="author">Author: Allan Neil</p>
-<p class="date">Created: 2025-04-06 Sun 16:10</p>
+<p class="date">Created: 2025-04-10 Thu 11:57</p>
 </div>
 </body>
 </html>

@@ -43,9 +43,47 @@ https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org
 + Xcode (recommended if using Emacs for dev)
 See https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#with-homebrew for installation instructions using Homebrew.
 
-** Install Emacs
+** Installing Emacs
 The Doom Getting Started Guide recommends emacs-mac first, emacs-plus second, and thirdly just emacs.
 See https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#with-homebrew instructions,
-
-
 For Mac either Homebrew or MacPorts can be used.  I prefer Homebrew.
+I follow the instructions for the first recommendation, emacs-mac.
+
+** Installing Doom
+After installing the dependencies and Emacs itself, finally Doom can be installed, again following the Getting Started Guide as linked above.
+        git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
+        ~/.emacs.d/bin/doom install
+
+* Configuration of Doom Emacs
+** Setting $PATH
+Since I am using ZSH shell, the hidden .ZSHRC file is edited to include both the Emacs bin and Doom paths as follows:
++ Emacs - export PATH="/opt/homebrew/Cellar/emacs-mac/emacs-29.1-mac-10.0/Emacs.app/Contents/MacOS:$PATH"
++ Doom - export PATH="$HOME/.emacs.d/bin:$PATH"
+
+** Doom command - very important
+There is a doom CLI tool which is used to install, update and maintain doom.
+Full explanation of this command and it's options can be found here: https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#the-bindoom-utility
+Excerpted here for reference (quote)
++ *doom sync*: This synchronizes your config with Doom Emacs. It ensures that needed packages are installed, orphaned packages are removed and necessary metadata correctly generated. Run this whenever you modify your doom! block or packages.el file. You’ll need doom sync -u if you override the recipe of package installed by another module.
++ *doom upgrade*: Updates Doom Emacs (if available) and all its packages.
++ *doom env*: (Re)generates an “envvar file”, which is a snapshot of your shell environment that Doom loads at startup. If your app launcher or OS launches Emacs in the wrong environment you will need this. **This is required for GUI Emacs users on MacOS.**
++ *doom doctor*: If Doom misbehaves, the doc will diagnose common issues with your installation, system and environment.
++ *doom purge*: Over time, the repositories for Doom’s plugins will accumulate. Run this command from time to time to delete old, orphaned packages, and with the -g switch to compact existing package repos.
+  (unquote)
+
+  It's a good idea to run both "Doom Sync" and "Doom Doctor" after installation to confirm everything is working correctly.
+
+** Configuring Github Magit
+Magit is and included package with Doom and is an awesome interface to Git.
+
+*** Configuring Github
+Magit will require access to Github.  I use an SSH key for this.
+Instructions for this set up can be found here: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+
+*** Configuring Magit
+After setting up SSH access to Github, setting up Magit should be straight forward.
+
+Pressing Cmd-X will bring up the M-x prompt where there are 3 magit commands as follows:
++ *magit-remote-add* to add a remote (github)
++ *magit-remote-configure* to configure an existing remote (github)
++ *magit-remote-remove* to remove an existing remote (github)
