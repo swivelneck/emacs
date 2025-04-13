@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="English" xml:lang="English">
 <head>
-<!-- 2025-04-10 Thu 11:57 -->
+<!-- 2025-04-12 Sat 23:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Emacs Overview</title>
@@ -201,28 +201,30 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org15d6634">1. Emacs overview</a>
+<li><a href="#orgee8f5b3">1. Emacs overview</a>
 <ul>
-<li><a href="#orgc21e208">1.1. Purpose</a></li>
-<li><a href="#org8368895">1.2. Why bother?</a></li>
+<li><a href="#org8b8c540">1.1. Purpose</a></li>
+<li><a href="#orgf3af181">1.2. Why bother?</a></li>
 </ul>
 </li>
-<li><a href="#org94104b0">2. Reference Emacs Environment Snapshot</a></li>
-<li><a href="#org4d49672">3. Installing Doom Emacs and Dependencies:</a>
+<li><a href="#org2a1b05e">2. Reference Emacs Environment Snapshot</a></li>
+<li><a href="#orgcb1ae5e">3. Installing Doom Emacs and Dependencies:</a>
 <ul>
-<li><a href="#orgd8ef309">3.1. Installing Doom Dependencies</a></li>
-<li><a href="#org0b18b2e">3.2. Installing Emacs</a></li>
-<li><a href="#org0bb706d">3.3. Installing Doom</a></li>
+<li><a href="#orged51d98">3.1. Installing Doom Dependencies</a></li>
+<li><a href="#org2b2f9ea">3.2. Installing Emacs</a></li>
+<li><a href="#org01ad2cd">3.3. Installing Doom</a></li>
 </ul>
 </li>
-<li><a href="#orge809070">4. Configuration of Doom Emacs</a>
+<li><a href="#orgaeb0409">4. Configuration of Doom Emacs</a>
 <ul>
-<li><a href="#orgd50d0e5">4.1. Setting $PATH</a></li>
-<li><a href="#org39af71b">4.2. Doom command - very important</a></li>
-<li><a href="#org2e8aa59">4.3. Configuring Github Magit</a>
+<li><a href="#orgec0e2a6">4.1. Setting $PATH</a></li>
+<li><a href="#orgeb68db2">4.2. Doom command - very important</a></li>
+<li><a href="#org7c17490">4.3. Configuring Github and Magit</a>
 <ul>
-<li><a href="#orgfa73b12">4.3.1. Configuring Github</a></li>
-<li><a href="#org8be7cbc">4.3.2. Configuring Magit</a></li>
+<li><a href="#org86ae2dd">4.3.1. Configuring Github</a></li>
+<li><a href="#org98780fe">4.3.2. Configuring Magit in Doom Emacs</a></li>
+<li><a href="#org3922aaa">4.3.3. Configuring PlantUML in Doom Emacs</a></li>
+<li><a href="#orgffc5a6a">4.3.4. Configuring GPTel for AI LLM integration</a></li>
 </ul>
 </li>
 </ul>
@@ -230,12 +232,12 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org15d6634" class="outline-2">
-<h2 id="org15d6634"><span class="section-number-2">1.</span> Emacs overview</h2>
+<div id="outline-container-orgee8f5b3" class="outline-2">
+<h2 id="orgee8f5b3"><span class="section-number-2">1.</span> Emacs overview</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgc21e208" class="outline-3">
-<h3 id="orgc21e208"><span class="section-number-3">1.1.</span> Purpose</h3>
+<div id="outline-container-org8b8c540" class="outline-3">
+<h3 id="org8b8c540"><span class="section-number-3">1.1.</span> Purpose</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 I love Emacs!  However problems arise when I have been away from it for too long and I forget how to use it or when I upgrade my computer and am forced to relearn how to install and set it up again.
@@ -252,8 +254,8 @@ The purpose of this repository and set of documents is to provide a documented r
 </ul>
 </div>
 </div>
-<div id="outline-container-org8368895" class="outline-3">
-<h3 id="org8368895"><span class="section-number-3">1.2.</span> Why bother?</h3>
+<div id="outline-container-orgf3af181" class="outline-3">
+<h3 id="orgf3af181"><span class="section-number-3">1.2.</span> Why bother?</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Configuring Emacs is not for the feint of heart.  It fits into a class of problems which could be called non-trivial.
@@ -271,8 +273,8 @@ One measure of a good tool of any kind is to what extent does the distinction be
 </div>
 </div>
 </div>
-<div id="outline-container-org94104b0" class="outline-2">
-<h2 id="org94104b0"><span class="section-number-2">2.</span> Reference Emacs Environment Snapshot</h2>
+<div id="outline-container-org2a1b05e" class="outline-2">
+<h2 id="org2a1b05e"><span class="section-number-2">2.</span> Reference Emacs Environment Snapshot</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Below is a snapshot of my environment..
@@ -289,16 +291,16 @@ Below is a snapshot of my environment..
 </ul>
 </div>
 </div>
-<div id="outline-container-org4d49672" class="outline-2">
-<h2 id="org4d49672"><span class="section-number-2">3.</span> Installing Doom Emacs and Dependencies:</h2>
+<div id="outline-container-orgcb1ae5e" class="outline-2">
+<h2 id="orgcb1ae5e"><span class="section-number-2">3.</span> Installing Doom Emacs and Dependencies:</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Doom Emacs has an excellent Getting Started Guide which can be used for this:
 <a href="https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org">https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org</a>
 </p>
 </div>
-<div id="outline-container-orgd8ef309" class="outline-3">
-<h3 id="orgd8ef309"><span class="section-number-3">3.1.</span> Installing Doom Dependencies</h3>
+<div id="outline-container-orged51d98" class="outline-3">
+<h3 id="orged51d98"><span class="section-number-3">3.1.</span> Installing Doom Dependencies</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li>ripgrep</li>
@@ -310,8 +312,8 @@ See <a href="https://github.com/doomemacs/doomemacs/blob/master/docs/getting_sta
 </p>
 </div>
 </div>
-<div id="outline-container-org0b18b2e" class="outline-3">
-<h3 id="org0b18b2e"><span class="section-number-3">3.2.</span> Installing Emacs</h3>
+<div id="outline-container-org2b2f9ea" class="outline-3">
+<h3 id="org2b2f9ea"><span class="section-number-3">3.2.</span> Installing Emacs</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 The Doom Getting Started Guide recommends emacs-mac first, emacs-plus second, and thirdly just emacs.
@@ -321,8 +323,8 @@ I follow the instructions for the first recommendation, emacs-mac.
 </p>
 </div>
 </div>
-<div id="outline-container-org0bb706d" class="outline-3">
-<h3 id="org0bb706d"><span class="section-number-3">3.3.</span> Installing Doom</h3>
+<div id="outline-container-org01ad2cd" class="outline-3">
+<h3 id="org01ad2cd"><span class="section-number-3">3.3.</span> Installing Doom</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 After installing the dependencies and Emacs itself, finally Doom can be installed, again following the Getting Started Guide as linked above.
@@ -332,12 +334,12 @@ After installing the dependencies and Emacs itself, finally Doom can be installe
 </div>
 </div>
 </div>
-<div id="outline-container-orge809070" class="outline-2">
-<h2 id="orge809070"><span class="section-number-2">4.</span> Configuration of Doom Emacs</h2>
+<div id="outline-container-orgaeb0409" class="outline-2">
+<h2 id="orgaeb0409"><span class="section-number-2">4.</span> Configuration of Doom Emacs</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-orgd50d0e5" class="outline-3">
-<h3 id="orgd50d0e5"><span class="section-number-3">4.1.</span> Setting $PATH</h3>
+<div id="outline-container-orgec0e2a6" class="outline-3">
+<h3 id="orgec0e2a6"><span class="section-number-3">4.1.</span> Setting $PATH</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Since I am using ZSH shell, the hidden .ZSHRC file is edited to include both the Emacs bin and Doom paths as follows:
@@ -348,8 +350,8 @@ Since I am using ZSH shell, the hidden .ZSHRC file is edited to include both the
 </ul>
 </div>
 </div>
-<div id="outline-container-org39af71b" class="outline-3">
-<h3 id="org39af71b"><span class="section-number-3">4.2.</span> Doom command - very important</h3>
+<div id="outline-container-orgeb68db2" class="outline-3">
+<h3 id="orgeb68db2"><span class="section-number-3">4.2.</span> Doom command - very important</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 There is a doom CLI tool which is used to install, update and maintain doom.
@@ -372,15 +374,15 @@ It's a good idea to run both "Doom Sync" and "Doom Doctor" after installation to
 </ul>
 </div>
 </div>
-<div id="outline-container-org2e8aa59" class="outline-3">
-<h3 id="org2e8aa59"><span class="section-number-3">4.3.</span> Configuring Github Magit</h3>
+<div id="outline-container-org7c17490" class="outline-3">
+<h3 id="org7c17490"><span class="section-number-3">4.3.</span> Configuring Github and Magit</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 Magit is and included package with Doom and is an awesome interface to Git.
 </p>
 </div>
-<div id="outline-container-orgfa73b12" class="outline-4">
-<h4 id="orgfa73b12"><span class="section-number-4">4.3.1.</span> Configuring Github</h4>
+<div id="outline-container-org86ae2dd" class="outline-4">
+<h4 id="org86ae2dd"><span class="section-number-4">4.3.1.</span> Configuring Github</h4>
 <div class="outline-text-4" id="text-4-3-1">
 <p>
 Magit will require access to Github.  I use an SSH key for this.
@@ -388,8 +390,8 @@ Instructions for this set up can be found here: <a href="https://docs.github.com
 </p>
 </div>
 </div>
-<div id="outline-container-org8be7cbc" class="outline-4">
-<h4 id="org8be7cbc"><span class="section-number-4">4.3.2.</span> Configuring Magit</h4>
+<div id="outline-container-org98780fe" class="outline-4">
+<h4 id="org98780fe"><span class="section-number-4">4.3.2.</span> Configuring Magit in Doom Emacs</h4>
 <div class="outline-text-4" id="text-4-3-2">
 <p>
 After setting up SSH access to Github, setting up Magit should be straight forward.
@@ -405,13 +407,94 @@ Pressing Cmd-X will bring up the M-x prompt where there are 3 magit commands as 
 </ul>
 </div>
 </div>
+<div id="outline-container-org3922aaa" class="outline-4">
+<h4 id="org3922aaa"><span class="section-number-4">4.3.3.</span> Configuring PlantUML in Doom Emacs</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<p>
+There are a number of different packages available for Emacs.  Even though the resulting diagrams have a kind of "old school" look to them, the package I prefer to use is PlantUML due to its' maturity and breadth of diagram types.
+There are 3 key steps to configuring PlantUML in Doom Emacs.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org0d41a90"></a>Installing Java<br />
+<div class="outline-text-5" id="text-4-3-3-1">
+<p>
+The PlantUML package requires the Java run-time.
+brew install openjdk@23 will install version 23 of Java.
+</p>
+</div>
+</li>
+<li><a id="org563fd97"></a>Enabling the package in the Doom Emacs<br />
+<div class="outline-text-5" id="text-4-3-3-2">
+<p>
+There are 3 configuration files which are used to customize Doom Emacs which are located in the ".doom.d" subdirectory which will be located under home directory.
+Tip: Use Shift+Command+. to show hidden files
+</p>
+<ul class="org-ul">
+<li>Init.el for intitialization options</li>
+<li>Config.el for configuration</li>
+<li>Packages. el for packages</li>
+</ul>
+
+<p>
+PlantUML is enabled by uncommenting (removing the ;; characters in from  of ) plantuml in the init.el file.
+This basically tells Doom Emacs to load that package at startup.
+</p>
+</div>
+</li>
+<li><a id="orgeaebf75"></a>Downloading the PlantJAR<br />
+<div class="outline-text-5" id="text-4-3-3-3">
+<p>
+In Doom Emacs, press Command-X and enter PlantUML to see a list of available PlantUML commands.
+Select command plantuml-download-jar to download the JAR (java archive) for PlantUML
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgffc5a6a" class="outline-4">
+<h4 id="orgffc5a6a"><span class="section-number-4">4.3.4.</span> Configuring GPTel for AI LLM integration</h4>
+<div class="outline-text-4" id="text-4-3-4">
+<p>
+GPTel is a great package for integration Emacs with AI LLM models.
+See <a href="https://github.com/karthink/gptel">https://github.com/karthink/gptel</a> for an overview of this package.
+GPTel can be configured to work with a long list of LLM's.  These configuration instructions will focus on ChatGPT but the above link can be used for instructions for other models as needed.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org09f7c1b"></a>Packages.el<br />
+<div class="outline-text-5" id="text-4-3-4-1">
+<p>
+Edit packages.el and add the following line:
+(package! gptel :recipe (:nonrecursive t))
+</p>
+</div>
+</li>
+<li><a id="org78da149"></a>Config.el<br />
+<div class="outline-text-5" id="text-4-3-4-2">
+<p>
+Edit config.el and add the following:
+(use-package! gptel
+ :config
+ (setq! gptel-api-key "your key"))
+</p>
+
+<p>
+Note that the ChatGPT api key is required.
+For security purposes, especially if the config.el file will be put on Github for version control, the API key can be provided by via "authinfo".
+Details for this can be found here <a href="https://github.com/karthink/gptel?tab=readme-ov-file#optional-securing-api-keys-with-authinfo">https://github.com/karthink/gptel?tab=readme-ov-file#optional-securing-api-keys-with-authinfo</a>
+</p>
+</div>
+</li>
+</ol>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2025-04-06 Sun 00:00</p>
 <p class="author">Author: Allan Neil</p>
-<p class="date">Created: 2025-04-10 Thu 11:57</p>
+<p class="date">Created: 2025-04-12 Sat 23:49</p>
 </div>
 </body>
 </html>

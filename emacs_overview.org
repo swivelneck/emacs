@@ -73,17 +73,55 @@ Excerpted here for reference (quote)
 
   It's a good idea to run both "Doom Sync" and "Doom Doctor" after installation to confirm everything is working correctly.
 
-** Configuring Github Magit
+** Configuring Github and Magit
 Magit is and included package with Doom and is an awesome interface to Git.
 
 *** Configuring Github
 Magit will require access to Github.  I use an SSH key for this.
 Instructions for this set up can be found here: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
 
-*** Configuring Magit
+*** Configuring Magit in Doom Emacs
 After setting up SSH access to Github, setting up Magit should be straight forward.
 
 Pressing Cmd-X will bring up the M-x prompt where there are 3 magit commands as follows:
 + *magit-remote-add* to add a remote (github)
 + *magit-remote-configure* to configure an existing remote (github)
 + *magit-remote-remove* to remove an existing remote (github)
+
+*** Configuring PlantUML in Doom Emacs
+There are a number of different packages available for Emacs.  Even though the resulting diagrams have a kind of "old school" look to them, the package I prefer to use is PlantUML due to its' maturity and breadth of diagram types.
+There are 3 key steps to configuring PlantUML in Doom Emacs.
+**** Installing Java
+The PlantUML package requires the Java run-time.
+brew install openjdk@23 will install version 23 of Java.
+**** Enabling the package in the Doom Emacs
+There are 3 configuration files which are used to customize Doom Emacs which are located in the ".doom.d" subdirectory which will be located under home directory.
+Tip: Use Shift+Command+. to show hidden files
++ Init.el for intitialization options
++ Config.el for configuration
++ Packages. el for packages
+
+PlantUML is enabled by uncommenting (removing the ;; characters in from  of ) plantuml in the init.el file.
+This basically tells Doom Emacs to load that package at startup.
+**** Downloading the PlantJAR
+In Doom Emacs, press Command-X and enter PlantUML to see a list of available PlantUML commands.
+Select command plantuml-download-jar to download the JAR (java archive) for PlantUML
+
+*** Configuring GPTel for AI LLM integration
+GPTel is a great package for integration Emacs with AI LLM models.
+See https://github.com/karthink/gptel for an overview of this package.
+GPTel can be configured to work with a long list of LLM's.  These configuration instructions will focus on ChatGPT but the above link can be used for instructions for other models as needed.
+
+**** Packages.el
+Edit packages.el and add the following line:
+(package! gptel :recipe (:nonrecursive t))
+
+**** Config.el
+Edit config.el and add the following:
+(use-package! gptel
+ :config
+ (setq! gptel-api-key "your key"))
+
+ Note that the ChatGPT api key is required.
+ For security purposes, especially if the config.el file will be put on Github for version control, the API key can be provided by via "authinfo".
+ Details for this can be found here https://github.com/karthink/gptel?tab=readme-ov-file#optional-securing-api-keys-with-authinfo
